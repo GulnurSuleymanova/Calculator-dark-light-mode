@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="container flex flex-col m-auto  rounded-4xl p-6 max-w-md shadow-2xl bg-white">
+    <label for="modeswitch" class="switch mx-auto mb-6">
+      <input type="checkbox" id="modeswitch">
+      <div class="sunmoon"></div>
+      <div class="clouds">
+        <img src="img/cloud_1.svg" alt="" class="cloud cloud-1" />
+        <img src="img/cloud_2.svg" alt="" class="cloud cloud-2" />
+        <img src="img/cloud_3.svg" alt="" class="cloud cloud-3" />
+        <img src="img/cloud_4.svg" alt="" class="cloud cloud-4" />
+        <img src="img/stars.svg" alt="" class="stars" />
+      </div>
+    </label>
+    <div class="mb-6">
+      <form action="">
+        <input type="text" placeholder="0" class="w-full text-right text-3xl p-4 bg-gray-200 rounded-full shadow-xl"  id="display"/>
+      </form>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4 mb-4 cursor-pointer">
+      <button class="w-20 h-20 rounded-full p-2 shadow-md bg-amber-400 transition duration-200 cursor-pointer"
+        onclick="clearDisplay()">clr</button>
+      <button class="w-20 h-20 rounded-full p-2 shadow-md bg-amber-400  transition duration-200 cursor-pointer"
+        onclick="del()">DEL</button>
+      <button class="w-20 h-20 rounded-full p-2 shadow-md bg-amber-400  transition duration-200 cursor-pointer"
+        onclick="show('%')">%</button>
+      <button class="w-20 h-20 rounded-full p-2 shadow-md bg-amber-400  transition duration-200 cursor-pointer"
+        onclick="show('/')">/</button>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4 mb-4">
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('7')">7</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('8')">8</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('9')">9</button>
+      <button class="w-20 h-20 rounded-full p-2 shadow-md bg-amber-400  transition duration-200 cursor-pointer"
+        onclick="show('*')">*</button>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4 mb-4">
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('4')">4</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('5')">5</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('6')">6</button>
+      <button class=" w-20 h-20 rounded-full p-2 shadow-md bg-amber-400  transition duration-200 cursor-pointer"
+        onclick="show('-')">-</button>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4 mb-4">
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('1')">1</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('2')">2</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('3')">3</button>
+      <button class="w-20 h-20 rounded-full p-2 shadow-md bg-amber-400  transition duration-200 cursor-pointer"
+        onclick="show('+')">+</button>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4">
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('.')">.</button>
+      <button
+        class="bg-gray-200 w-20 h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 cursor-pointer"
+        onclick="show('0')">0</button>
+      <button
+        class="equal col-span-2 text-white w-full h-20 rounded-full p-2 shadow-md hover:bg-amber-600 transition duration-200 text-xl cursor-pointer"
+        onclick="clac()">=</button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
